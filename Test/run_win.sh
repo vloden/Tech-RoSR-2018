@@ -1,3 +1,3 @@
 conda env create --force -f environment.yml&&
-source activate test_env&&
+source activate myenv&&
 jupyter-nbconvert Test.ipynb
