@@ -3,7 +3,6 @@ jobs:
     build:
         docker:
             - image: circleci/python:3.6.1
-        working directory: ~/Tech-RoSR-2018
         steps:
             - checkout 
             - run: 
