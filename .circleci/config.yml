@@ -5,16 +5,19 @@ jobs:
             - image: circleci/python:3.6.1
         # working directory: ~/Tech-RoSR-2018
         steps:
-            - run: 
-                name: Create html from ipynb on Windows
-                command: |
-                    cd Test
-                    ./run_win.sh
-            - run: 
-                name: Create html from ipynb on MacOS
-                command: |
-                    cd Test
-                    ./run_MacOS.sh
+            -run:
+                name: Get ls
+                command: ls > ls.txt
+            # - run: 
+                # name: Create html from ipynb on Windows
+                # command: |
+                    # cd Test
+                    # ./run_win.sh
+            # - run: 
+                # name: Create html from ipynb on MacOS
+                # command: |
+                    # cd Test
+                    # ./run_MacOS.sh
             - store_artifacts:
                 path: .
                 destination: .
