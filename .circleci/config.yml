@@ -3,14 +3,14 @@ jobs:
     build:
         docker:
             - image: circleci/python:3.6.1
-#        working directory: ~/All_work/Reproducibility of Scientific Research/Project
-        working directory: ~/Project/Test
+        working directory: ~/All_work/Reproducibility of Scientific Research/Project/Test
+        # working directory: ~/Project/Test
         steps:
             - run: 
-                name: create html from ipynb on Windows
+                name: Create html from ipynb on Windows
                 command: ./run_win.sh
             - run: 
-                name: create html from ipynb on MacOS
+                name: Create html from ipynb on MacOS
                 command: ./run_MacOS.sh
             - store_artifacts:
                 path: .
