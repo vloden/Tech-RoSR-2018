@@ -1,6 +1,17 @@
 version: 2
 jobs:
     build:
-        working directory: ~/All_work/Reproducibility of Scientific Research/Project
+#        working directory: ~/All_work/Reproducibility of Scientific Research/Project
+        working directory: ~/Test
         steps:
-            - run: ./Test/run_win.sh
+            - run: 
+                name: create html from ipynb on Windows
+                command: |
+                    ./run_win.sh
+            - run: 
+                name: create html from ipynb on MacOS
+                command: |
+                    ./run_MacOS.sh
+            - store_artifacts:
+                path: .
+                destination: .
