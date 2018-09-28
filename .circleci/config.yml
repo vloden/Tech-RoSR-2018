@@ -4,14 +4,14 @@ jobs:
         docker:
             - image: circleci/python:3.6.1
 #        working directory: ~/All_work/Reproducibility of Scientific Research/Project
-        working directory: ~/Test
+        working directory: ~/Tech-RoSR-2018
         steps:
             - run: 
                 name: create html from ipynb on Windows
-                command: ls
+                command: ls > ls.txt
             - run: 
                 name: create html from ipynb on MacOS
-                command: ls
+                command: ls > ls.txt
             - store_artifacts:
                 path: .
                 destination: .
