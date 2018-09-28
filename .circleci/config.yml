@@ -1,0 +1,6 @@
+version: 2
+jobs:
+    build:
+        working directory: ~/All_work/Reproducibility of Scientific Research/Project
+        steps:
+            - run: ./Test/run_win.sh
