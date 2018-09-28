@@ -1,7 +1,6 @@
 version: 2
 jobs:
     build:
-        working_directory: ~/Tech-RoSR-2018/Test
         docker:
             - image: circleci/python:3.6.1
         steps:
@@ -9,6 +8,7 @@ jobs:
             - run: 
                 name: Create html from ipynb on Windows
                 command: ./run_win.sh
+                working_directory: Test
             - run: 
                 name: Create html from ipynb on MacOS
                 command: ./run_MacOS.sh
