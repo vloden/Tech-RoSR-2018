@@ -5,9 +5,10 @@ jobs:
             - image: circleci/python:3.6.1
         # working directory: ~/Tech-RoSR-2018
         steps:
-            -run:
+            - run:
                 name: Get ls
-                command: ls > ls.txt
+                command: |
+                    ls > ls.txt
             - store_artifacts:
                 path: .
                 destination: .
