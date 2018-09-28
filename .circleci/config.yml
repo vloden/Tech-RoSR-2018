@@ -9,11 +9,13 @@ jobs:
             - run: 
                 name: create html from ipynb on Windows
                 command: |
-                    run_win.sh
+#                    run_win.sh
+                    ls
             - run: 
                 name: create html from ipynb on MacOS
                 command: |
-                    run_MacOS.sh
+#                    run_MacOS.sh
+                    ls
             - store_artifacts:
                 path: .
                 destination: .
