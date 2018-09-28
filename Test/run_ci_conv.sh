@@ -1,2 +1,2 @@
-. venv/bin/activate &&
-jupyter-nbconvert Test.ipynb &&
+. venv/bin/activate 
+jupyter-nbconvert Test.ipynb 
