@@ -3,8 +3,7 @@ jobs:
     build:
         docker:
             - image: circleci/python:3.6.1
-        working directory: ~/All_work/Reproducibility of Scientific Research/Project/Test
-        # working directory: ~/Project/Test
+        working directory: ~/Tech-RoSR-2018/Test
         steps:
             - run: 
                 name: Create html from ipynb on Windows
