@@ -8,14 +8,10 @@ jobs:
         steps:
             - run: 
                 name: create html from ipynb on Windows
-                command: |
-#                    run_win.sh
-                    ls
+                command: ls
             - run: 
                 name: create html from ipynb on MacOS
-                command: |
-#                    run_MacOS.sh
-                    ls
+                command: ls
             - store_artifacts:
                 path: .
                 destination: .
