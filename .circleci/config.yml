@@ -6,12 +6,12 @@ jobs:
         steps:
             - checkout 
             - run: 
-                name: Create html from ipynb on Windows
-                command: sh ./run_win.sh
+                name: Create environment
+                command: sh ./run_ci_env.sh
                 working_directory: Test
             - run: 
-                name: Create html from ipynb on MacOS
-                command: ./run_MacOS.sh
+                name: Create html from ipynb
+                command: sh ./run_ci_conv.sh
                 working_directory: Test
             - store_artifacts:
-                path: .
+                path: Test
