@@ -7,9 +7,11 @@ jobs:
             - checkout 
             - run: 
                 name: Create html from ipynb on Windows
-                command: ./run_win.sh
+                command: sh ./run_win.sh
+                working_directory: Test
             - run: 
                 name: Create html from ipynb on MacOS
                 command: ./run_MacOS.sh
+                working_directory: Test
             - store_artifacts:
                 path: .
