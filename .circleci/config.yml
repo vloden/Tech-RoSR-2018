@@ -2,16 +2,16 @@ version: 2
 jobs:
     build:
         docker:
-            - image: circleci/python:3.6.1
+            - image: circleci/python:3.7.0
         steps:
             - checkout 
             - run: 
-                name: Create environment
-                command: sh ./run_ci_env.sh
+                name: Create html from ipynb on Windows
+                command: sh ./run_win.sh
                 working_directory: Test
             - run: 
-                name: Create html from ipynb
-                command: sh ./run_ci_conv.sh
+                name: Create html from ipynb on MacOS
+                command: sh ./run_MacOS.sh
                 working_directory: Test
             - store_artifacts:
                 path: Test
