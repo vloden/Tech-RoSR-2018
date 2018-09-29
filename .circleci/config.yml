@@ -16,5 +16,4 @@ jobs:
                 command: sh ./run_ci_conv.sh
                 working_directory: Test
             - store_artifacts:
-                path: Test
-                destination: Test/Results
+                path: Test/Results
