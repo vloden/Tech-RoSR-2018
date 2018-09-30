@@ -9,8 +9,6 @@ jobs:
                 name: Create environment
                 command: sh ./run_ci_env.sh
                 working_directory: Test
-                paths:
-                    - "venv"
             - run: 
                 name: Create html from ipynb
                 command: sh ./run_ci_conv.sh
