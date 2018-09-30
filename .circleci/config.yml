@@ -16,7 +16,7 @@ jobs:
                 # working_directory: Test
             - run:
                 name: Create html from ipynb
-                command: sh ./run_win.sh
+                command: sh ./run_CI.sh
                 working_directory: Test
             - store_artifacts:
                 path: Test/Results
