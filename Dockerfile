@@ -8,6 +8,6 @@ ENV HOME=/tmp
 
 ADD * /tmp/
 # SHELL ["/bin/bash", "-c"]
-RUN cd /tmp && sh ./run_doc.sh
+RUN cd /tmp && bash ./run_doc.sh
 
 CMD /bin/sh
