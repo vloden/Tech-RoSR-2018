@@ -6,7 +6,7 @@ jobs:
         steps:
             - checkout
             - restore_cache:
-                key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
+                key: deps1
             - run: 
                 name: Create environment
                 command: sh ./run_ci_env.sh
@@ -14,8 +14,6 @@ jobs:
                 name: Create html from ipynb
                 command: sh ./run_ci_conv.sh
             - save_cache:
-                key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
-                paths:
-                    - "venv"
+                key: deps1
             - store_artifacts:
                 path: Results
