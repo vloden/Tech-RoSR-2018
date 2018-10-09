@@ -7,7 +7,9 @@ RUN pip install --no-cache --upgrade pip && \
 ENV HOME=/tmp
 
 ADD * /tmp/
+RUN cd /tmp  
+RUN chmod +x run_doc.sh 
 SHELL ["/bin/bash", "-c"]
-RUN cd /tmp && chmod +x run_doc.sh && ./run_doc.sh
+RUN ./run_doc.sh
 
-CMD /bin/bash
+CMD /bin/sh
