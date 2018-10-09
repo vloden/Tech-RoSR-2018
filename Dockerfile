@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM continuumio/miniconda3:4.5.11
 MAINTAINER vladimirzyuzin@yandex.ru
 
 # install the notebook package
