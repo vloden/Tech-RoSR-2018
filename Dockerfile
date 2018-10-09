@@ -7,9 +7,7 @@ RUN pip install --no-cache --upgrade pip && \
 ENV HOME=/tmp
 
 ADD * /tmp/
-RUN cd /tmp
-RUN conda env create --force -f environment.yml
-RUN source activate myenv
-RUN jupyter-nbconvert --execute src/Test.ipynb --output Test_win.html
+SHELL ["/bin/bash", "-c"]
+RUN cd /tmp && chmod +x run_win.sh && ./run_win.sh
 
 CMD /bin/sh
