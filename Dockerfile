@@ -8,6 +8,7 @@ ENV HOME=/tmp
 
 ADD * /tmp/
 RUN cd /tmp  
+RUN ls
 RUN chmod +x run_doc.sh 
 SHELL ["/bin/bash", "-c"]
 RUN ./run_doc.sh
