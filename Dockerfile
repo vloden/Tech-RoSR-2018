@@ -9,4 +9,4 @@ ENV HOME=/tmp
 ADD * /tmp/
 RUN cd /tmp && chmod +x run_win.sh && ./run_win.sh
 
-CMD /bin/sh
+CMD /bin/bash
