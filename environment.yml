@@ -5,6 +5,7 @@ dependencies:
   - ca-certificates=2018.03.07=0
   - certifi=2018.8.24=py37_1
   - openssl=1.0.2p
+  - matplotlib=2.2.3
   - pip=10.0.1=py37_0
   - python=3.7.0
   - setuptools=40.2.0=py37_0
