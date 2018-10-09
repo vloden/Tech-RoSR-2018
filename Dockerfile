@@ -7,6 +7,6 @@ RUN pip install --no-cache --upgrade pip && \
 ENV HOME=/tmp
 
 ADD * /tmp/
-RUN cd /tmp && chmod +x run.sh && ./run_win.sh
+RUN cd /tmp && chmod +x run_win.sh && ./run_win.sh
 
 CMD /bin/sh
