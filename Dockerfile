@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.5.11
+FROM continuumio/anaconda3:5.3.0
 MAINTAINER vladimirzyuzin@yandex.ru
 
 # install the notebook package
@@ -9,4 +9,4 @@ ENV HOME=/tmp
 ADD * /tmp/
 RUN cd /tmp && chmod +x run_win.sh && ./run_win.sh
 
-CMD /bin/bash
+CMD /bin/sh
