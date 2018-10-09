@@ -10,4 +10,4 @@ ADD * /tmp/
 SHELL ["/bin/bash", "-c"]
 RUN cd /tmp && chmod +x run_doc.sh && ./run_doc.sh
 
-CMD /bin/sh
+CMD /bin/bash
