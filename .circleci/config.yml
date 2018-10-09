@@ -15,5 +15,7 @@ jobs:
                 command: sh ./run_ci_conv.sh
             - save_cache:
                 key: deps1
+                paths:
+                    - "venv"
             - store_artifacts:
                 path: Results
