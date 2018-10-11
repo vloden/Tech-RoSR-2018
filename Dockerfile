@@ -6,8 +6,7 @@ RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
 ENV HOME=/tmp
 
-ADD * /tmp/
-# SHELL ["/bin/bash", "-c"]
-RUN cd /tmp && bash ./run_doc.sh
+ADD . /tmp/
+RUN cd /tmp && ls 
 
 CMD /bin/sh
