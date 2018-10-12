@@ -4,7 +4,7 @@ MAINTAINER vladimirzyuzin@yandex.ru
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook && \
-	pip install --no-cache --upgrade setuptools
+	pip install --no-cache ez_setup
 ENV HOME=/tmp
 
 ADD . /tmp/
