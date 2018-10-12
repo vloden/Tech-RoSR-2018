@@ -7,6 +7,7 @@ RUN pip install --no-cache --upgrade pip && \
 ENV HOME=/tmp
 
 ADD . /tmp/
-RUN cd /tmp && pip install -r requirements.txt && jupyter-nbconvert --execute src/Test.ipynb --output Test_doc.html
+WORKDIR /tmp
+RUN pip install -r requirements.txt && jupyter-nbconvert --execute src/Test.ipynb --output Test_doc.html
 
 CMD /bin/sh
