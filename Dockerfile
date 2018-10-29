@@ -9,5 +9,6 @@ ENV HOME=/tmp
 ADD . /tmp/
 WORKDIR /tmp
 RUN pip install -r requirements.txt && jupyter-nbconvert --execute src/Test.ipynb --output Test_doc.html
+RUN cd kaggle && mkdir input && cd input && kaggle competitions download titanic
 
 CMD /bin/sh
