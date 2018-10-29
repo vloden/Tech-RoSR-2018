@@ -11,8 +11,8 @@ jobs:
                 name: Create environment and api
                 command: |
                     sh ./run_ci_env.sh
-                    mkdir .kaggle
-                    echo $KaggleAPI > .kaggle/kaggle.json
+                    mkdir ~/.kaggle
+                    echo $KaggleAPI > ~/.kaggle/kaggle.json
             - run: 
                 name: Download solution
                 command: |
