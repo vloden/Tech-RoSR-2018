@@ -18,8 +18,10 @@ jobs:
                 command: |
                     . venv/bin/activate
                     cd kaggle
+                    mkdir input
+                    cd input
                     kaggle competitions download titanic
-                    cd src
+                    cd ../src
                     jupyter nbconvert --execute titanic.ipynb
                     kaggle competitions submit titanic -f answer.csv -m "solution with circle and binder"
             - save_cache:
