@@ -8,11 +8,20 @@ jobs:
             - restore_cache:
                 key: deps1
             - run: 
-                name: Create environment
-                command: sh ./run_ci_env.sh
+                name: Create environment and api
+                command: |
+                    sh ./run_ci_env.sh
+                    mkdir .kaggle
+                    echo $KaggleAPI > .kaggle/kaggle.json
             - run: 
-                name: Create html from ipynb
-                command: sh ./run_ci_conv.sh
+                name: Download solution
+                command: |
+                    . venv/bin/activate
+                    cd kaggle
+                    kaggle competitions download titanic
+                    cd src
+                    jupyter nbconvert --execute titanic.ipynb
+                    kaggle competitions submit titanic -f answer.csv -m "solution with circle and binder"
             - save_cache:
                 key: deps1
                 paths:
