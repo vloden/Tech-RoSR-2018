@@ -13,8 +13,9 @@ jobs:
                     sh ./run_ci_env.sh
                     mkdir ~/.kaggle
                     echo $KaggleAPI > ~/.kaggle/kaggle.json
+                    pip install osfclient
             - run: 
-                name: Download solution
+                name: Download solution and upload to osf
                 command: |
                     . venv/bin/activate
                     cd kaggle/input
@@ -22,6 +23,7 @@ jobs:
                     cd ../src
                     jupyter nbconvert --execute titanic.ipynb
                     kaggle competitions submit titanic -f answer.csv -m "solution with circle and binder"
+                    osf -u vladimirzyuzin@yandex.ru -p x783r upload answer_osf.csv osfstorage/Zyuzin/answer_osf.csv
             - save_cache:
                 key: deps1
                 paths:
