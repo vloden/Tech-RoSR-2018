@@ -21,7 +21,6 @@ jobs:
                     kaggle competitions download --force titanic
                     cd ../src
                     jupyter nbconvert --execute titanic.ipynb
-                    kaggle competitions submit titanic -f answer.csv -m "solution with circle and binder"
                     export OSF_PASSWORD
                     osf -u vladimirzyuzin@yandex.ru -p x783r upload answer_osf.csv osfstorage/Zyuzin/answer_osf.csv
             - save_cache:
