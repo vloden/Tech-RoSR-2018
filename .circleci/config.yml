@@ -13,7 +13,6 @@ jobs:
                     sh ./run_ci_env.sh
                     mkdir ~/.kaggle
                     echo $KaggleAPI > ~/.kaggle/kaggle.json
-                    pip install osfclient
             - run: 
                 name: Download solution and upload to osf
                 command: |
